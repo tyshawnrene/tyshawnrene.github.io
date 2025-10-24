@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tyshawn Rene | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/style.css" />
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <header>
+    <h1 id="typed-text"></h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <img src="./static/imgs/profile.png" alt="Photo of Tyshawn Rene" class="profile-pic" />
+        <p>
+          I am a Computer Science student at Colby College. I've loved computers since I was young,
+          and I have a particular interest in Data Science and AI. Currently, I'm working with a professor
+          at Colby to study the correlation between AI and Kinematics, and I'm also undergoing personal
+          projects to study GUI creation and database management.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Colby Forecasting 2025</h3>
+          <p>
+            A project based in R that uses the OBIS database published by NOAA and the Random Forest
+            classification algorithm to forecast the presence of Jonah Crabs in the Gulf of Maine
+            for 2055 and 2075.
+          </p>
+          <a href="https://github.com/tyshawnrene/ColbyForecasting2025" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Password-Enter</h3>
+          <p>
+            A program that enters a list of passwords into an application on an Android device,
+            using a computer and the Android Debug Bridge (ADB).
+          </p>
+          <a href="https://github.com/tyshawnrene/Password-Enter" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Kinelog</h3>
+          <p>
+            A large-scale, WIP project blending AI and Kinematics. The project involves taking
+            movement data from either self-recorded sources or datasets found online, training an AI 
+            model on this data, and using it to answer questions such as which style of dance is used.
+          </p>
+          <p><em>No GitHub Link Yet!</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Connect with me on
+        <a href="https://github.com/tyshawnrene" target="_blank">GitHub</a> or
+        <a href="mailto:tyshawnrene@gmail.com">Email me</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Tyshawn Rene</p>
+  </footer>
+
+  <script src="./static/script.js"></script>
+  <script src="./static/particles.js"></script>
+</body>
+</html>
