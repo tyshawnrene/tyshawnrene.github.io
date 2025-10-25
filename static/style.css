@@ -16,7 +16,7 @@ body {
 
 h1, h2, h3 {
   color: #00ffff;
-  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; 
   letter-spacing: 1px;
 }
 
@@ -182,5 +182,52 @@ canvas#particles {
 
 .crt-wrapper {
   transform: perspective(800px) rotateX(2deg);
+  overflow: hidden;
+}
+
+#intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  z-index: 10000;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 4s; 
+}
+
+.intro-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.press-start {
+  font-size: 0.8rem;
+  color: #00ffff;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+body.intro-active {
   overflow: hidden;
 }
