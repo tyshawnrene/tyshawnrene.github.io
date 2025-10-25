@@ -16,7 +16,7 @@ body {
 
 h1, h2, h3 {
   color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
   letter-spacing: 1px;
 }
 
@@ -150,4 +150,37 @@ canvas#particles {
   height: 100%;
   z-index: -1;
   background: #000;
+}
+
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+
+  background: 
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
+  
+  animation: crt-flicker 0.15s infinite;
+}
+
+@keyframes crt-flicker {
+  0%, 100% { opacity: 0.98; }
+  50% { opacity: 1; }
+}
+
+.crt-wrapper {
+  transform: perspective(800px) rotateX(2deg);
+  overflow: hidden;
 }
